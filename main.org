@@ -8,10 +8,6 @@
 #+begin_src emacs-lisp
 (setq user-full-name "Johnny Alejandro Rojas"
       user-mail-address "johnny.rojas.me@gmail.com")
-
-(add-to-list 'load-path "~/.config/doom/org-preview") ;; path to org-preview.el
-(require 'org-preview)
-
 #+end_src
 
 ** Fonts
