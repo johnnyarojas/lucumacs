@@ -63,3 +63,4 @@
 (package! org-superstar)
 (package! cdlatex)
 (package! company-math)
+(package! org-fragtog)
