@@ -1,9 +1,6 @@
 (setq user-full-name "Johnny Alejandro Rojas"
       user-mail-address "johnny.rojas.me@gmail.com")
 
-(add-to-list 'load-path "~/.config/doom/org-preview") ;; path to org-preview.el
-(require 'org-preview)
-
 (setq doom-font (font-spec :family "Fira Code Nerd Font")
       doom-variable-pitch-font (font-spec :family "Fira Code Nerd Font"))
 
@@ -18,8 +15,7 @@
 ;; (dolist (hook '(text-mode-hook org-mode-hook LaTeX-mode-hook))
 ;;   (add-hook hook #'auto-fill-mode))
 
-(after! evil
-  (setq evil-default-state 'emacs))
+(setq evil-default-state 'emacs)
 
 ;; This line of code makes the module availiable
 (use-package! visual-fill-column)
@@ -35,10 +31,11 @@
 (add-hook 'org-mode-hook #'my-centered-buffer)
 (add-hook 'LaTeX-mode-hook #'my-centered-buffer)
 
-(after! xenops
+(use-package! xenops
+  :hook (LaTeX-mode . xenops-mode)
+  :config
   (setq xenops-math-image-scale-factor 1.6
-        xenops-reveal-on-entry nil)
-  (add-hook 'LaTeX-mode-hook #'xenops-mode))
+        xenops-reveal-on-entry nil))
 
 (after! org
   (setq org-startup-with-latex-preview t
@@ -130,3 +127,12 @@
         "\\begin{align*}\n$0\n\\end{align*}"
         "align*"
         nil nil nil "/align" nil nil)))))
+
+(setq elfeed-feeds
+      '(("https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw"
+         youtube math)))
+
+(use-package! elfeed-tube
+  :after elfeed
+  :config
+  (elfeed-tube-setup))

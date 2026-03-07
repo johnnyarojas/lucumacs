@@ -43,7 +43,7 @@
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
-       ;;smooth-scroll     ; So smooth you won't believe it's not butter
+       smooth-scroll     ; So smooth you won't believe it's not butter
        ;;tabs              ; a tab bar for Emacs
        ;;treemacs          ; a project drawer, like neotree but cooler
        ;;unicode           ; extended unicode support for various languages
@@ -93,7 +93,7 @@
        ;;biblio            ; Writes a PhD for you (citation needed)
        ;;collab            ; buffers with friends
        ;;debugger          ; FIXME stepping through code, to help you add bugs
-       ;;direnv
+       direnv
        ;;docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
@@ -191,7 +191,7 @@
        ;;emms
        ;;everywhere        ; *leave* Emacs!? You must be joking
        ;;irc               ; how neckbeards socialize
-       ;;(rss +org)        ; emacs as an RSS reader
+       rss        ; emacs as an RSS reader
 
        :config
        ;;literate

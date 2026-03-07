@@ -47,13 +47,12 @@
 
 * Evil Configuration
 #+begin_src emacs-lisp
-(after! evil
-  (setq evil-default-state 'emacs))
+(setq evil-default-state 'emacs)
 #+end_src
 
 * Visual Layout
 
-** Centered "Book" Layout
+__license-mozilla-bp Centered "Book" Layout
 #+begin_src emacs-lisp
 ;; This line of code makes the module availiable
 (use-package! visual-fill-column)
@@ -72,10 +71,11 @@
 
 * Xenops and org-latex-preview
 #+begin_src emacs-lisp
-(after! xenops
+(use-package! xenops
+  :hook (LaTeX-mode . xenops-mode)
+  :config
   (setq xenops-math-image-scale-factor 1.6
-        xenops-reveal-on-entry nil)
-  (add-hook 'LaTeX-mode-hook #'xenops-mode))
+        xenops-reveal-on-entry nil))
 
 (after! org
   (setq org-startup-with-latex-preview t
@@ -189,5 +189,14 @@
         nil nil nil "/align" nil nil)))))
 #+end_src
 
-* Another part of the code
-A continuation we are gonna present some LaTeX Code
+* elfeed Configuration
+#+begin_src emacs-lisp
+(setq elfeed-feeds
+      '(("https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw"
+         youtube math)))
+
+(use-package! elfeed-tube
+  :after elfeed
+  :config
+  (elfeed-tube-setup))
+#+end_src

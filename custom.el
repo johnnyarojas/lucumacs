@@ -5,7 +5,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("8c7e832be864674c220f9a9361c851917a93f921fedb7717b1b5ece47690c098"
+   '("921f165deb8030167d44eaa82e85fcef0254b212439b550a9b6c924f281b5695"
+     "1b74dd5576787105a0efcd6e8fed74755bb3fd234aaa5d500e21ddbd56c2661a"
+     "8c7e832be864674c220f9a9361c851917a93f921fedb7717b1b5ece47690c098"
      "9e5e0ff3a81344c9b1e6bfc9b3dcf9b96d5ec6a60d8de6d4c762ee9e2121dfb2"
      "aec7b55f2a13307a55517fdf08438863d694550565dee23181d2ebd973ebd6b8"
      "f5ab1ad901eb430cdcd9b2a6824e94ff384172a9492ff7a88fe989ee2d583f09"
@@ -21,9 +23,11 @@
      "5c7720c63b729140ed88cf35413f36c728ab7c70f8cd8422d9ee1cedeb618de5"
      "e4a702e262c3e3501dfe25091621fe12cd63c7845221687e36a79e17cf3a67e0"
      "720838034f1dd3b3da66f6bd4d053ee67c93a747b219d1c546c41c4e425daf93" default))
+ '(elfeed-feeds '(#("Not found!" 0 10 (face error))))
  '(org-agenda-files
-   '("~/Documents/calendar/2026/personal.org"
-     "/home/johnny/Documents/calendar/2026/school.org"
+   '("~/Documents/School/Academic/2026/Winter/math-200-a/Linear Algebra Schedule.org"
+     "/home/johnny/Documents/School/Academic/2026/Winter/comm-135-c/Public Speaking Weekender.org"
+     "/home/johnny/Documents/School/Academic/2026/Winter/phys-222-a/Physics for Scientists and Engineers II Weekender.org"
      "/home/johnny/Documents/School/Academic/2026/Winter/comm-135-c/Notes/20260211.Lecture.org")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
