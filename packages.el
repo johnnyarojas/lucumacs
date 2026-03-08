@@ -64,5 +64,3 @@
 (package! cdlatex)
 (package! company-math)
 (package! org-fragtog)
-(package! elfeed-tube)
-(package! elfeed-tube-mpv) ; Optional: For MPV integration
