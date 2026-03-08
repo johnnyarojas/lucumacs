@@ -18,7 +18,7 @@
 
 ** Theme
 #+begin_src emacs-lisp
-(setq doom-theme 'ef-day)
+(setq doom-theme 'ef-night)
 #+end_src
 
 ** Line Numbers
@@ -187,16 +187,4 @@ __license-mozilla-bp Centered "Book" Layout
         "\\begin{align*}\n$0\n\\end{align*}"
         "align*"
         nil nil nil "/align" nil nil)))))
-#+end_src
-
-* elfeed Configuration
-#+begin_src emacs-lisp
-(setq elfeed-feeds
-      '(("https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw"
-         youtube math)))
-
-(use-package! elfeed-tube
-  :after elfeed
-  :config
-  (elfeed-tube-setup))
 #+end_src
