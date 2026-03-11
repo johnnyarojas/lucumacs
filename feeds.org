@@ -1,0 +1,8 @@
+#+title: Feeds
+
+* Root :elfeed:
+** News :news:
+*** [[https://www.theverge.com/rss/index.xml][The Verge]]
+*** [[https://news.ycombinator.com/rss][Hacker News]]
+** Physics :physics:youtube:
+*** [[https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA][Veritasium]]

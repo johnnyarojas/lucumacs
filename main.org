@@ -188,3 +188,23 @@ __license-mozilla-bp Centered "Book" Layout
         "align*"
         nil nil nil "/align" nil nil)))))
 #+end_src
+
+* elfeed and elfeed-tube Configuration
+#+begin_src emacs-lisp
+(setq rmh-elfeed-org-files '("~/.config/doom/feeds.org"))
+
+;; In config.el
+(use-package! elfeed-tube
+  :after elfeed
+  :config
+  (elfeed-tube-setup)
+  :bind (:map elfeed-show-mode-map
+         ("F" . elfeed-tube-fetch)
+         ([remap elfeed-show-visit] . elfeed-tube-visit)
+         :map elfeed-search-mode-map
+         ("F" . elfeed-tube-fetch)
+         ([remap elfeed-search-browse-url] . elfeed-tube-visit)))
+
+(use-package! elfeed-tube-mpv
+  :after elfeed-tube)
+#+end_src

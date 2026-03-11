@@ -182,7 +182,7 @@
        ;;zig               ; C, but simpler
 
        :email
-       ;;(mu4e +org +gmail)
+       (mu4e +org +gmail)
        ;;notmuch
        ;;(wanderlust +gmail)
 
@@ -191,7 +191,7 @@
        ;;emms
        ;;everywhere        ; *leave* Emacs!? You must be joking
        ;;irc               ; how neckbeards socialize
-       rss        ; emacs as an RSS reader
+       (rss +org)        ; emacs as an RSS reader
 
        :config
        ;;literate
