@@ -6,3 +6,5 @@
 *** [[https://news.ycombinator.com/rss][Hacker News]]
 ** Physics :physics:youtube:
 *** [[https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA][Veritasium]]
+** SAU :saunews:
+*** [[https://api.calendar.moderncampus.net/pubcalendar/6b7cb250-b6eb-4060-a2bf-c17c97707aa5/rss?category=c853e842-9468-4cc1-b401-e122984dc6d6&url=https%3A%2F%2Fwww.southern.edu%2Fcalendar.html&hash=true][SAU Calendar]]
