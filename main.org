@@ -99,18 +99,70 @@ __license-mozilla-bp Centered "Book" Layout
 (defun my-prettify-latex-symbols ()
   "Prettify common LaTeX math symbols."
   (setq prettify-symbols-alist
-        '(("\\pi" . ?π)
-          ("\\theta" . ?θ)
-          ("\\lambda" . ?λ)
+        '(;; Greek letters
           ("\\alpha" . ?α)
           ("\\beta" . ?β)
           ("\\gamma" . ?γ)
+          ("\\delta" . ?δ)
+          ("\\Delta" . ?Δ)
+          ("\\epsilon" . ?ε)
+          ("\\zeta" . ?ζ)
+          ("\\eta" . ?η)
+          ("\\theta" . ?θ)
+          ("\\kappa" . ?κ)
+          ("\\lambda" . ?λ)
+          ("\\mu" . ?μ)
+          ("\\nu" . ?ν)
+          ("\\xi" . ?ξ)
+          ("\\pi" . ?π)
+          ("\\rho" . ?ρ)
+          ("\\sigma" . ?σ)
+          ("\\Sigma" . ?Σ)
+          ("\\tau" . ?τ)
+          ("\\phi" . ?φ)
+          ("\\chi" . ?χ)
+          ("\\psi" . ?ψ)
+          ("\\Psi" . ?Ψ)
+          ("\\omega" . ?ω)
+          ("\\Omega" . ?Ω)
+
+          ;; Calculus & operators
+          ("\\nabla" . ?∇)
+          ("\\partial" . ?∂)
           ("\\infty" . ?∞)
           ("\\sum" . ?∑)
           ("\\int" . ?∫)
           ("\\euler" . ?ℯ)
-          ("\\phi" . ?φ)
-          ("\\epsilon" . ?ε)))
+          ("\\times" . ?×)
+          ("\\cdot" . ?·)
+          ("\\pm" . ?±)
+
+          ;; Relations
+          ("\\leq" . ?≤)
+          ("\\geq" . ?≥)
+          ("\\neq" . ?≠)
+          ("\\approx" . ?≈)
+          ("\\equiv" . ?≡)
+          ("\\in" . ?∈)
+          ("\\notin" . ?∉)
+          ("\\subset" . ?⊂)
+
+          ;; Logic
+          ("\\forall" . ?∀)
+          ("\\exists" . ?∃)
+
+          ;; Arrows — long and short share the same glyph
+          ("\\rightarrow" . ?→)
+          ("\\longrightarrow" . ?→)
+          ("\\leftarrow" . ?←)
+          ("\\longleftarrow" . ?←)
+          ("\\Rightarrow" . ?⇒)
+          ("\\Leftrightarrow" . ?⇔)))
+
+  (setq-local prettify-symbols-compose-predicate
+              (lambda (start end _match)
+                (let ((after (char-after end)))
+                  (not (and after (string-match-p "[a-zA-Z]" (string after)))))))
   (prettify-symbols-mode 1))
 
 (add-hook 'org-mode-hook #'my-prettify-latex-symbols)
