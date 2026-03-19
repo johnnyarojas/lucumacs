@@ -208,3 +208,36 @@ __license-mozilla-bp Centered "Book" Layout
 (use-package! elfeed-tube-mpv
   :after elfeed-tube)
 #+end_src
+
+* Org-Roam Configuration
+#+BEGIN_SRC emacs-lisp
+(use-package! org-roam
+  :after org
+  :init
+  (setq org-roam-directory "~/Documents/")  ; needed before load
+  :config
+  (setq org-roam-file-exclude-regexp        ; fine after load
+        (rx (or
+             "Resources/"
+             "Submitted/"
+             "Draft/"
+             "Work/Clients/"
+             "Work/Active/"
+             "Work/Archive/"
+             "Academic/SAU/2025/"
+             "Academic/SAU/2026/Finances/"
+             "Academic/SAU/2026/Admin/"
+             "Personal/Collaboration/")))
+  (org-roam-db-autosync-mode))
+
+(use-package! org-id
+  :after org
+  :config
+  (setq org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id))
+#+END_SRC
+
+* Piper Text To Speech
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "/home/johnny/Documents/Personal/Programming/tts/")
+(require 'piper-speak)
+#+END_SRC
