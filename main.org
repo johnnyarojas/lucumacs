@@ -166,6 +166,7 @@ __license-mozilla-bp Centered "Book" Layout
   (prettify-symbols-mode 1))
 
 (add-hook 'org-mode-hook #'my-prettify-latex-symbols)
+(add-hook 'LaTeX-mode-hook #'my-prettify-latex-symbols)
 #+end_src
 
 * Org Mode Customization
